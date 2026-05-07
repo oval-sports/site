@@ -33,7 +33,7 @@ jobs:
           extended: false
 
       - name: Build
-        run: hugo --minify
+        run: hugo --minify --baseURL "https://oval-sports.github.io/site/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
