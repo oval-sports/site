@@ -9,130 +9,7 @@
 
     <div class="booking-layout">
 
-      <!-- BOOKING WIDGET -->
-      <div class="booking-form-wrap">
-        <div class="booking-steps-nav">
-          <div class="bstep active" data-step="1"><span>1</span> Date & Time</div>
-          <div class="bstep" data-step="2"><span>2</span> Lane & Players</div>
-          <div class="bstep" data-step="3"><span>3</span> Your Details</div>
-          <div class="bstep" data-step="4"><span>4</span> Confirm</div>
-        </div>
-
-        <!-- STEP 1 -->
-        <div class="booking-step" id="step1">
-          <h3>Select Date & Time</h3>
-          <div class="cal-full">
-            <div class="cal-nav">
-              <button class="cal-prev" id="calPrev">‹</button>
-              <span id="calMonthLabel">May 2025</span>
-              <button class="cal-next" id="calNext">›</button>
-            </div>
-            <div class="cal-weekdays">
-              <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
-            </div>
-            <div class="cal-days" id="calDays"></div>
-          </div>
-
-          <div class="time-slots" id="timeSlots">
-            <h4>Available Slots <span id="selectedDateLabel"></span></h4>
-            <div class="slots-grid" id="slotsGrid"></div>
-          </div>
-          <button class="btn btn-primary btn-next" id="step1Next" disabled>Next: Lane Selection →</button>
-        </div>
-
-        <!-- STEP 2 -->
-        <div class="booking-step hidden" id="step2">
-          <h3>Choose Lane & Players</h3>
-          <div class="lane-cards">
-            <div class="lane-card" data-lane="1">
-              <div class="lane-num">Lane 1</div>
-              <div class="lane-detail">Full pitch · Turf surface · Right-hand friendly</div>
-              <div class="lane-price">NPR 800 / hr</div>
-            </div>
-            <div class="lane-card" data-lane="2">
-              <div class="lane-num">Lane 2</div>
-              <div class="lane-detail">Full pitch · Turf surface · Both orientations</div>
-              <div class="lane-price">NPR 800 / hr</div>
-            </div>
-          </div>
-          <div class="players-select">
-            <label>Number of players</label>
-            <div class="num-control">
-              <button id="playersMinus">−</button>
-              <span id="playersCount">2</span>
-              <button id="playersPlus">+</button>
-            </div>
-          </div>
-          <div class="addons">
-            <label>Add-ons</label>
-            <div class="addon-item">
-              <input type="checkbox" id="bowling" value="bowling">
-              <label for="bowling">Bowling Machine — NPR 400/hr</label>
-            </div>
-            <div class="addon-item">
-              <input type="checkbox" id="coaching" value="coaching">
-              <label for="coaching">Coaching Session — NPR 600/hr</label>
-            </div>
-            <div class="addon-item">
-              <input type="checkbox" id="equipment" value="equipment">
-              <label for="equipment">Equipment Hire (bat, pads, gloves) — NPR 300</label>
-            </div>
-          </div>
-          <button class="btn btn-outline btn-back" id="step2Back">← Back</button>
-          <button class="btn btn-primary btn-next" id="step2Next" disabled>Next: Your Details →</button>
-        </div>
-
-        <!-- STEP 3 -->
-        <div class="booking-step hidden" id="step3">
-          <h3>Your Details</h3>
-          <div class="form-grid">
-            <div class="form-group">
-              <label>Full Name *</label>
-              <input type="text" id="bookName" placeholder="Your full name">
-            </div>
-            <div class="form-group">
-              <label>Phone *</label>
-              <input type="tel" id="bookPhone" placeholder="+977 98XXXXXXXX">
-            </div>
-            <div class="form-group">
-              <label>Email</label>
-              <input type="email" id="bookEmail" placeholder="your@email.com">
-            </div>
-            <div class="form-group">
-              <label>Notes</label>
-              <input type="text" id="bookNotes" placeholder="Any special requests?">
-            </div>
-          </div>
-          <button class="btn btn-outline btn-back" id="step3Back">← Back</button>
-          <button class="btn btn-primary btn-next" id="step3Next">Review Booking →</button>
-        </div>
-
-        <!-- STEP 4 -->
-        <div class="booking-step hidden" id="step4">
-          <h3>Confirm Your Booking</h3>
-          <div class="booking-summary" id="bookingSummary"></div>
-          <div class="payment-note">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            Payment is collected at the venue. Your slot is held for 30 minutes after booking.
-          </div>
-          <button class="btn btn-outline btn-back" id="step4Back">← Back</button>
-          <button class="btn btn-primary" id="confirmBooking">Confirm Booking ✓</button>
-        </div>
-
-        <!-- SUCCESS -->
-        <div class="booking-step hidden" id="stepSuccess">
-          <div class="booking-success">
-            <div class="success-icon">✓</div>
-            <h3>Booking Confirmed!</h3>
-            <p>Your lane is reserved. We'll send a confirmation to your phone/email.</p>
-            <p class="success-ref">Booking Ref: <strong id="bookingRef"></strong></p>
-            <a href="/" class="btn btn-primary">Back to Home</a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- SIDEBAR -->
+      <!-- SIDEBAR FIRST in DOM but displayed right via CSS -->
       <aside class="booking-sidebar">
         <div class="sidebar-card">
           <h4>Venue Info</h4>
@@ -148,18 +25,238 @@
           <table class="price-table">
             <tr><td>Lane hire (1 hr)</td><td><strong>NPR 800</strong></td></tr>
             <tr><td>Bowling machine</td><td><strong>NPR 400</strong></td></tr>
-            <tr><td>Coaching</td><td><strong>NPR 600</strong></td></tr>
+            <tr><td>Coaching session</td><td><strong>NPR 600</strong></td></tr>
             <tr><td>Equipment hire</td><td><strong>NPR 300</strong></td></tr>
           </table>
+        </div>
+        <div class="sidebar-card sidebar-booking-summary-live" id="liveSummary" style="display:none;">
+          <h4>Your Selection</h4>
+          <div id="liveSummaryContent"></div>
         </div>
         <div class="sidebar-card">
           <h4>Group & Corporate</h4>
           <p>Need the whole venue? We offer corporate packages, tournament hire, and birthday events.</p>
-          <a href="/contact/" class="btn btn-outline" style="margin-top:1rem;display:inline-block;">Enquire Now</a>
+          <a href="/contact/" class="btn btn-outline" style="margin-top:1rem;display:inline-block;width:100%;text-align:center;">Enquire Now</a>
         </div>
       </aside>
 
-    </div>
+      <!-- BOOKING WIDGET -->
+      <div class="booking-form-wrap">
+
+        <!-- AUTH CHOICE -->
+        <div class="auth-choice" id="authChoice">
+          <h3>How would you like to book?</h3>
+          <div class="auth-options">
+            <div class="auth-card" id="authLoginBtn">
+              <div class="auth-icon">👤</div>
+              <div>
+                <strong>Sign In</strong>
+                <p>For returning customers — faster booking, booking history & loyalty points</p>
+              </div>
+              <span class="auth-arrow">→</span>
+            </div>
+            <div class="auth-card" id="authGuestBtn">
+              <div class="auth-icon">🏃</div>
+              <div>
+                <strong>Continue as Guest</strong>
+                <p>Quick booking without an account</p>
+              </div>
+              <span class="auth-arrow">→</span>
+            </div>
+          </div>
+          <p class="auth-note">Don't have an account? <a href="#" id="authRegisterLink">Create one free →</a></p>
+        </div>
+
+        <!-- LOGIN PANEL -->
+        <div class="auth-panel hidden" id="loginPanel">
+          <button class="back-link" id="backToChoice">← Back</button>
+          <h3>Sign In to Your Account</h3>
+          <div class="form-group">
+            <label>Phone or Email</label>
+            <input type="text" id="loginId" placeholder="+977 98... or email@...">
+          </div>
+          <div class="form-group" style="margin-top:1rem;">
+            <label>Password</label>
+            <input type="password" id="loginPass" placeholder="Your password">
+          </div>
+          <div class="form-actions" style="margin-top:1.25rem;">
+            <button class="btn btn-primary" id="doLogin">Sign In & Continue →</button>
+            <a href="#" class="form-link">Forgot password?</a>
+          </div>
+          <div class="auth-divider"><span>or</span></div>
+          <button class="btn btn-outline" style="width:100%;" id="continueAsGuest2">Continue as Guest instead</button>
+        </div>
+
+        <!-- REGISTER PANEL -->
+        <div class="auth-panel hidden" id="registerPanel">
+          <button class="back-link" id="backToChoice2">← Back</button>
+          <h3>Create an Account</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="regName" placeholder="Your full name">
+            </div>
+            <div class="form-group">
+              <label>Phone *</label>
+              <input type="tel" id="regPhone" placeholder="+977 98XXXXXXXX">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="regEmail" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label>Password *</label>
+              <input type="password" id="regPass" placeholder="Choose a password">
+            </div>
+          </div>
+          <button class="btn btn-primary" style="margin-top:.5rem;" id="doRegister">Create Account & Continue →</button>
+        </div>
+
+        <!-- BOOKING STEPS (shown after auth choice) -->
+        <div id="bookingStepsWrap" class="hidden">
+
+          <!-- LOGGED IN BANNER (shown when signed in) -->
+          <div class="logged-in-banner hidden" id="loggedInBanner">
+            <span>👤</span>
+            <span id="loggedInName">Welcome back!</span>
+            <button class="btn-text-small" id="signOutBtn">Sign out</button>
+          </div>
+
+          <div class="booking-steps-nav">
+            <div class="bstep active" data-step="1"><span>1</span> Date & Time</div>
+            <div class="bstep" data-step="2"><span>2</span> Lane & Extras</div>
+            <div class="bstep" data-step="3"><span>3</span> Your Details</div>
+            <div class="bstep" data-step="4"><span>4</span> Confirm</div>
+          </div>
+
+          <!-- STEP 1 -->
+          <div class="booking-step" id="step1">
+            <h3>Select Date & Time</h3>
+            <div class="cal-full">
+              <div class="cal-nav">
+                <button class="cal-prev" id="calPrev">‹</button>
+                <span id="calMonthLabel"></span>
+                <button class="cal-next" id="calNext">›</button>
+              </div>
+              <div class="cal-weekdays">
+                <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+              </div>
+              <div class="cal-days" id="calDays"></div>
+            </div>
+            <div class="time-slots">
+              <h4>Available Time Slots <span id="selectedDateLabel" class="slot-date-label"></span></h4>
+              <div class="slots-grid" id="slotsGrid">
+                <p class="slot-placeholder">← Select a date to see available slots</p>
+              </div>
+            </div>
+            <div class="step-footer">
+              <button class="btn btn-primary" id="step1Next" disabled>Next: Lane & Extras →</button>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="booking-step hidden" id="step2">
+            <h3>Choose Lane & Extras</h3>
+            <div class="lane-cards">
+              <div class="lane-card" data-lane="1">
+                <div class="lane-num">Lane 1</div>
+                <div class="lane-detail">Full pitch · Turf surface · Right-hand friendly</div>
+                <div class="lane-price">NPR 800 / hr</div>
+              </div>
+              <div class="lane-card" data-lane="2">
+                <div class="lane-num">Lane 2</div>
+                <div class="lane-detail">Full pitch · Turf surface · Both orientations</div>
+                <div class="lane-price">NPR 800 / hr</div>
+              </div>
+            </div>
+            <div class="players-select">
+              <label>Number of players</label>
+              <div class="num-control">
+                <button id="playersMinus" type="button">−</button>
+                <span id="playersCount">2</span>
+                <button id="playersPlus" type="button">+</button>
+              </div>
+            </div>
+            <div class="addons">
+              <label>Add-ons (optional)</label>
+              <div class="addon-item">
+                <input type="checkbox" id="bowling" value="bowling">
+                <label for="bowling">Bowling Machine — <strong>NPR 400/hr</strong></label>
+              </div>
+              <div class="addon-item">
+                <input type="checkbox" id="coaching" value="coaching">
+                <label for="coaching">Coaching Session — <strong>NPR 600/hr</strong></label>
+              </div>
+              <div class="addon-item">
+                <input type="checkbox" id="equipment" value="equipment">
+                <label for="equipment">Equipment Hire (bat, pads, gloves) — <strong>NPR 300</strong></label>
+              </div>
+            </div>
+            <div class="step-footer">
+              <button class="btn btn-outline" id="step2Back" type="button">← Back</button>
+              <button class="btn btn-primary" id="step2Next" type="button" disabled>Next: Your Details →</button>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="booking-step hidden" id="step3">
+            <h3>Your Details</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" id="bookName" placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label>Phone *</label>
+                <input type="tel" id="bookPhone" placeholder="+977 98XXXXXXXX">
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="bookEmail" placeholder="your@email.com">
+              </div>
+              <div class="form-group">
+                <label>Special Requests</label>
+                <input type="text" id="bookNotes" placeholder="Any notes?">
+              </div>
+            </div>
+            <div class="step-footer">
+              <button class="btn btn-outline" id="step3Back" type="button">← Back</button>
+              <button class="btn btn-primary" id="step3Next" type="button">Review Booking →</button>
+            </div>
+          </div>
+
+          <!-- STEP 4 -->
+          <div class="booking-step hidden" id="step4">
+            <h3>Confirm Your Booking</h3>
+            <div class="booking-summary" id="bookingSummary"></div>
+            <div class="payment-note">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Payment collected at the venue. Your slot is held for 30 minutes after booking.
+            </div>
+            <div class="step-footer">
+              <button class="btn btn-outline" id="step4Back" type="button">← Back</button>
+              <button class="btn btn-primary" id="confirmBooking" type="button">✓ Confirm Booking</button>
+            </div>
+          </div>
+
+          <!-- SUCCESS -->
+          <div class="booking-step hidden" id="stepSuccess">
+            <div class="booking-success">
+              <div class="success-icon">✓</div>
+              <h3>Booking Confirmed!</h3>
+              <p>Your lane is reserved. We'll send a confirmation to your phone/email.</p>
+              <p class="success-ref">Booking Ref: <strong id="bookingRef"></strong></p>
+              <div style="display:flex;gap:1rem;justify-content:center;margin-top:1.5rem;flex-wrap:wrap;">
+                <a href="/" class="btn btn-outline">Back to Home</a>
+                <a href="/booking/" class="btn btn-primary">Book Another Slot</a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /bookingStepsWrap -->
+      </div><!-- /booking-form-wrap -->
+
+    </div><!-- /booking-layout -->
   </div>
 </section>
 <script src="/js/booking.js"></script>
