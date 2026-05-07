@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Oval Sports | Cricsal Indoor Cricket</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Home on Oval Sports | Cricsal Indoor Cricket</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cricsal Launches New Pro Series Bat Range</title>
+      <link>http://localhost:1313/news/pro-series-launch/</link>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/pro-series-launch/</guid>
+      <description>Introducing the Pro Series — premium Kashmir Willow bats for serious batters.</description>
+    </item>
+    <item>
+      <title>Oval Sports Expands to 20&#43; Districts</title>
+      <link>http://localhost:1313/news/nepal-expansion/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/nepal-expansion/</guid>
+      <description>Cricsal products now available through dealers across 20 districts of Nepal.</description>
+    </item>
+    <item>
+      <title>New Helmets Meet BS 7928:2013 Standard</title>
+      <link>http://localhost:1313/news/helmet-standard/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/helmet-standard/</guid>
+      <description>Our updated helmet range meets international British Standard certification.</description>
+    </item>
+    <item>
+      <title>Book a Lane</title>
+      <link>http://localhost:1313/booking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/booking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cricket Shop</title>
+      <link>http://localhost:1313/shop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/shop/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

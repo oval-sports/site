@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Lane | Oval Sports | Cricsal Indoor Cricket</title>
+  <meta name="description" content="Reserve your indoor cricket net session at Cricsal, Kathmandu">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+  <nav class="nav-container">
+    <a href="/" class="logo">
+      <img src="/img/logo.png" alt="Oval Sports" class="logo-img">
+      <div class="logo-text">
+        <span class="logo-oval">OVAL SPORTS</span>
+        <span class="logo-sub">CRICSAL</span>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      
+      <li><a href="/" class="">Home</a></li>
+      
+      <li><a href="/booking/" class="active nav-cta">Book a Slot</a></li>
+      
+      <li><a href="/shop/" class="">Shop</a></li>
+      
+      <li><a href="/about/" class="">About</a></li>
+      
+      <li><a href="/news/" class="">News</a></li>
+      
+      <li><a href="/contact/" class="">Contact</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    
+<section class="booking-page section">
+  <div class="container">
+    <div class="page-hero-small">
+      <div class="section-eyebrow">Cricsal Indoor Cricket</div>
+      <h1>Book a Lane</h1>
+      <p>Reserve your net session online. Instant confirmation, no waiting.</p>
+    </div>
+
+    <div class="booking-layout">
+
+      
+      <div class="booking-form-wrap">
+        <div class="booking-steps-nav">
+          <div class="bstep active" data-step="1"><span>1</span> Date & Time</div>
+          <div class="bstep" data-step="2"><span>2</span> Lane & Players</div>
+          <div class="bstep" data-step="3"><span>3</span> Your Details</div>
+          <div class="bstep" data-step="4"><span>4</span> Confirm</div>
+        </div>
+
+        
+        <div class="booking-step" id="step1">
+          <h3>Select Date & Time</h3>
+          <div class="cal-full">
+            <div class="cal-nav">
+              <button class="cal-prev" id="calPrev">‹</button>
+              <span id="calMonthLabel">May 2025</span>
+              <button class="cal-next" id="calNext">›</button>
+            </div>
+            <div class="cal-weekdays">
+              <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+            </div>
+            <div class="cal-days" id="calDays"></div>
+          </div>
+
+          <div class="time-slots" id="timeSlots">
+            <h4>Available Slots <span id="selectedDateLabel"></span></h4>
+            <div class="slots-grid" id="slotsGrid"></div>
+          </div>
+          <button class="btn btn-primary btn-next" id="step1Next" disabled>Next: Lane Selection →</button>
+        </div>
+
+        
+        <div class="booking-step hidden" id="step2">
+          <h3>Choose Lane & Players</h3>
+          <div class="lane-cards">
+            <div class="lane-card" data-lane="1">
+              <div class="lane-num">Lane 1</div>
+              <div class="lane-detail">Full pitch · Turf surface · Right-hand friendly</div>
+              <div class="lane-price">NPR 800 / hr</div>
+            </div>
+            <div class="lane-card" data-lane="2">
+              <div class="lane-num">Lane 2</div>
+              <div class="lane-detail">Full pitch · Turf surface · Both orientations</div>
+              <div class="lane-price">NPR 800 / hr</div>
+            </div>
+          </div>
+          <div class="players-select">
+            <label>Number of players</label>
+            <div class="num-control">
+              <button id="playersMinus">−</button>
+              <span id="playersCount">2</span>
+              <button id="playersPlus">+</button>
+            </div>
+          </div>
+          <div class="addons">
+            <label>Add-ons</label>
+            <div class="addon-item">
+              <input type="checkbox" id="bowling" value="bowling">
+              <label for="bowling">Bowling Machine — NPR 400/hr</label>
+            </div>
+            <div class="addon-item">
+              <input type="checkbox" id="coaching" value="coaching">
+              <label for="coaching">Coaching Session — NPR 600/hr</label>
+            </div>
+            <div class="addon-item">
+              <input type="checkbox" id="equipment" value="equipment">
+              <label for="equipment">Equipment Hire (bat, pads, gloves) — NPR 300</label>
+            </div>
+          </div>
+          <button class="btn btn-outline btn-back" id="step2Back">← Back</button>
+          <button class="btn btn-primary btn-next" id="step2Next" disabled>Next: Your Details →</button>
+        </div>
+
+        
+        <div class="booking-step hidden" id="step3">
+          <h3>Your Details</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="bookName" placeholder="Your full name">
+            </div>
+            <div class="form-group">
+              <label>Phone *</label>
+              <input type="tel" id="bookPhone" placeholder="+977 98XXXXXXXX">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="bookEmail" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label>Notes</label>
+              <input type="text" id="bookNotes" placeholder="Any special requests?">
+            </div>
+          </div>
+          <button class="btn btn-outline btn-back" id="step3Back">← Back</button>
+          <button class="btn btn-primary btn-next" id="step3Next">Review Booking →</button>
+        </div>
+
+        
+        <div class="booking-step hidden" id="step4">
+          <h3>Confirm Your Booking</h3>
+          <div class="booking-summary" id="bookingSummary"></div>
+          <div class="payment-note">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Payment is collected at the venue. Your slot is held for 30 minutes after booking.
+          </div>
+          <button class="btn btn-outline btn-back" id="step4Back">← Back</button>
+          <button class="btn btn-primary" id="confirmBooking">Confirm Booking ✓</button>
+        </div>
+
+        
+        <div class="booking-step hidden" id="stepSuccess">
+          <div class="booking-success">
+            <div class="success-icon">✓</div>
+            <h3>Booking Confirmed!</h3>
+            <p>Your lane is reserved. We'll send a confirmation to your phone/email.</p>
+            <p class="success-ref">Booking Ref: <strong id="bookingRef"></strong></p>
+            <a href="/" class="btn btn-primary">Back to Home</a>
+          </div>
+        </div>
+
+      </div>
+
+      
+      <aside class="booking-sidebar">
+        <div class="sidebar-card">
+          <h4>Venue Info</h4>
+          <ul class="venue-info-list">
+            <li><strong>Hours:</strong> 6:00 AM – 10:00 PM, daily</li>
+            <li><strong>Address:</strong> Kathmandu, Nepal</li>
+            <li><strong>Lanes:</strong> 2 full-length indoor nets</li>
+            <li><strong>Surface:</strong> Professional turf</li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h4>Pricing</h4>
+          <table class="price-table">
+            <tr><td>Lane hire (1 hr)</td><td><strong>NPR 800</strong></td></tr>
+            <tr><td>Bowling machine</td><td><strong>NPR 400</strong></td></tr>
+            <tr><td>Coaching</td><td><strong>NPR 600</strong></td></tr>
+            <tr><td>Equipment hire</td><td><strong>NPR 300</strong></td></tr>
+          </table>
+        </div>
+        <div class="sidebar-card">
+          <h4>Group & Corporate</h4>
+          <p>Need the whole venue? We offer corporate packages, tournament hire, and birthday events.</p>
+          <a href="/contact/" class="btn btn-outline" style="margin-top:1rem;display:inline-block;">Enquire Now</a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+<script src="/js/booking.js"></script>
+
+  </main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="/img/logo.png" alt="Oval Sports">
+        <div class="footer-logo-text">
+          <span class="logo-oval">OVAL SPORTS</span>
+          <span class="logo-sub">CRICSAL</span>
+        </div>
+      </div>
+      <p class="footer-tagline">Kathmandu's premier indoor cricket venue & pro cricket shop.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/cricsal" target="_blank" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://facebook.com/cricsal" target="_blank" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://twitter.com/cricsal" target="_blank" aria-label="Twitter/X">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Venue</h4>
+        <ul>
+          <li><a href="/booking/">Book a Lane</a></li>
+          <li><a href="/booking/#pricing">Pricing</a></li>
+          <li><a href="/about/#venue">Facilities</a></li>
+          <li><a href="/contact/">Corporate Hire</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="/shop/?cat=bats">Cricket Bats</a></li>
+          <li><a href="/shop/?cat=protection">Protection</a></li>
+          <li><a href="/shop/?cat=apparel">Apparel</a></li>
+          <li><a href="/shop/?cat=accessories">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>Kathmandu, Nepal</li>
+          <li><a href="mailto:info@ovalsports.com">info@ovalsports.com</a></li>
+          <li><a href="tel:&#43;977-9800000000">&#43;977-9800000000</a></li>
+          <li>Open daily 6AM–10PM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Oval Sports Pvt. Ltd. All rights reserved. Cricsal is a brand of Oval Sports.</p>
+  </div>
+</footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

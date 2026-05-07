@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="list-page section">
+  <div class="container">
+    <header class="page-hero-small">
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    </header>
+    <div class="list-grid">
+      {{ range .Pages }}
+      <article class="list-card">
+        {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">{{ end }}
+        <div class="list-card-body">
+          {{ if .Date }}<time>{{ .Date.Format "Jan 02, 2006" }}</time>{{ end }}
+          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <p>{{ .Summary }}</p>
+          <a href="{{ .Permalink }}" class="read-more">Read more →</a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,42 @@
+baseURL = "https://ovalsports.com/"
+languageCode = "en-us"
+title = "Oval Sports | Cricsal Indoor Cricket"
+theme = "cricsal"
+
+[params]
+  description = "Kathmandu's Premier Indoor Cricket Venue & Cricket Equipment Store"
+  tagline = "Play Indoors. Shop Smart. Live Cricket."
+  brand = "Cricsal"
+  parent = "Oval Sports"
+  email = "info@ovalsports.com"
+  phone = "+977-9800000000"
+  address = "Kathmandu, Nepal"
+  instagram = "https://instagram.com/cricsal"
+  facebook = "https://facebook.com/cricsal"
+  twitter = "https://twitter.com/cricsal"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Book a Slot"
+    url = "/booking/"
+    weight = 2
+  [[menu.main]]
+    name = "Shop"
+    url = "/shop/"
+    weight = 3
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+  [[menu.main]]
+    name = "News"
+    url = "/news/"
+    weight = 5
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 6

@@ -1,0 +1,19 @@
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="/" class="logo">
+      <img src="/img/logo.png" alt="Oval Sports" class="logo-img">
+      <div class="logo-text">
+        <span class="logo-oval">OVAL SPORTS</span>
+        <span class="logo-sub">CRICSAL</span>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL }}" class="{{ if eq $.RelPermalink .URL }}active{{ end }}{{ if eq .Name "Book a Slot" }} nav-cta{{ end }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>
